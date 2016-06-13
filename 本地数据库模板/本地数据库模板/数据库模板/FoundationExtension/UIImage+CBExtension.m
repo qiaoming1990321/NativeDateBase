@@ -25,7 +25,7 @@
     
     // We need to calculate the proper transformation to make the image upright.
     // We do it in 2 steps: Rotate if Left/Right/Down, and then flip if Mirrored.
-    CGSize size = [UIImage finalImageSizeWithDestSize:CGSizeMake(ScreenWidth, ScreenHeight) originImg:self];
+    CGSize size = [UIImage finalImageSizeWithDestSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) originImg:self];
     CGAffineTransform transform = CGAffineTransformIdentity;
     //iphone UIImageOrientationRight
     NSLog(@"%f %f imageOrientation %zd", self.size.width, self.size.height, self.imageOrientation);
